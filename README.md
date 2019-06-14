@@ -10,6 +10,6 @@ By default, this image will run Rapidscan with no parameters. You have to add th
 
     $ docker run -t --rm --name rapidscan mablanco/rapidscan
 
-### Run an analysis against a website:
+### Run an analysis against a website
 
     $ docker run -t --rm --name rapidscan mablanco/rapidscan example.com
