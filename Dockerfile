@@ -8,7 +8,25 @@ RUN apt-get update && \
       python \
       host \
       whois \
-      golismero sslyze wapiti nmap dmitry dnsenum dnsmap dnsrecon dnswalk dirb wafw00f whatweb nikto lbd xsser fierce theharvester davtest uniscan && \
+      golismero \
+      sslyze \
+      wapiti \
+      nmap \
+      dmitry \
+      dnsenum \
+      dnsmap \
+      dnsrecon \
+      dnswalk \
+      dirb \
+      wafw00f \
+      whatweb \
+      nikto \
+      lbd \
+      xsser \
+      fierce \
+      theharvester \
+      davtest \
+      uniscan && \
     apt-get -y autoremove && \
     apt-get clean && \
     rm -rf /var/lib/{apt,dpkg,cache,log}
