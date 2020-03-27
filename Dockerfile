@@ -30,6 +30,6 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/{apt,dpkg,cache,log}
 RUN cd /usr/local/bin && \
-    wget --no-check-certificate -O rapidscan.py https://raw.githubusercontent.com/skavngr/rapidscan/master/rapidscan.py &&\
+    wget --no-check-certificate -q -O rapidscan.py https://raw.githubusercontent.com/skavngr/rapidscan/master/rapidscan.py &&\
     chmod +x rapidscan.py
 ENTRYPOINT ["/usr/local/bin/rapidscan.py"]
