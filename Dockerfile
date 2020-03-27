@@ -1,10 +1,11 @@
 FROM kalilinux/kali-linux-docker
+ENV DEBIAN_FRONTEND noninteractive
 RUN cd /usr/local/bin && \
     wget --no-check-certificate -O rapidscan.py https://raw.githubusercontent.com/skavngr/rapidscan/master/rapidscan.py &&\
     chmod +x rapidscan.py
 RUN apt-get update && \
-    apt-get -yu dist-upgrade && \
-    apt-get -y install \
+    apt-get -yqu dist-upgrade && \
+    apt-get -yq install \
       python \
       host \
       whois \
@@ -27,7 +28,7 @@ RUN apt-get update && \
       theharvester \
       davtest \
       uniscan && \
-    apt-get -y autoremove && \
+    apt-get -yq autoremove && \
     apt-get clean && \
     rm -rf /var/lib/{apt,dpkg,cache,log}
 ENTRYPOINT ["/usr/local/bin/rapidscan.py"]
