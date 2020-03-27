@@ -10,6 +10,6 @@ By default, this image will run Rapidscan with no parameters. You have to add th
 
     $ docker run -t --rm --name rapidscan mablanco/rapidscan
 
-### Run an analysis against a website
+### Run an analysis against a website, saving report in <host_report_folder>
 
-    $ docker run -it --rm --name rapidscan mablanco/rapidscan example.com
+    $ docker run -it --rm --name rapidscan -v <host_report_folder>:/app mablanco/rapidscan example.com

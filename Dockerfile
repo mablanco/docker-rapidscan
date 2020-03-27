@@ -32,4 +32,5 @@ RUN apt-get update && \
 RUN cd /usr/local/bin && \
     wget --no-check-certificate -q -O rapidscan.py https://raw.githubusercontent.com/skavngr/rapidscan/master/rapidscan.py &&\
     chmod +x rapidscan.py
+WORKDIR /app
 ENTRYPOINT ["/usr/local/bin/rapidscan.py"]
