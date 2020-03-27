@@ -1,4 +1,4 @@
-FROM kalilinux/kali-linux-docker
+FROM kalilinux/kali-rolling
 ENV DEBIAN_FRONTEND noninteractive
 RUN cd /usr/local/bin && \
     wget --no-check-certificate -O rapidscan.py https://raw.githubusercontent.com/skavngr/rapidscan/master/rapidscan.py &&\
