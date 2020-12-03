@@ -6,7 +6,6 @@ RUN apt-get update && \
       python \
       host \
       whois \
-      golismero \
       sslyze \
       wapiti \
       nmap \
