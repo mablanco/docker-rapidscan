@@ -24,6 +24,7 @@ RUN apt-get update && \
       theharvester \
       davtest \
       uniscan \
+      amass \
       wget && \
     apt-get -yq autoremove && \
     apt-get clean && \
