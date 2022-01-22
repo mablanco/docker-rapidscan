@@ -31,4 +31,5 @@ RUN apt-get update && \
     rm -rf /var/lib/{apt,dpkg,cache,log} && \
     wget --no-check-certificate -q -O /usr/local/bin/rapidscan https://raw.githubusercontent.com/skavngr/rapidscan/master/rapidscan.py && \
     chmod +x /usr/local/bin/rapidscan
+WORKDIR /app
 ENTRYPOINT ["/usr/local/bin/rapidscan"]
