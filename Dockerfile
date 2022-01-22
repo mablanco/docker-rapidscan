@@ -3,7 +3,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     apt-get -yqu dist-upgrade && \
     apt-get -yq install \
-      python \
+      python3 \
       host \
       whois \
       sslyze \
