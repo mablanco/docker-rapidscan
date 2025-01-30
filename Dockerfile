@@ -1,5 +1,5 @@
-FROM kalilinux/kali-rolling
-ENV DEBIAN_FRONTEND noninteractive
+FROM kalilinux/kali-rolling:latest@sha256:8ce1ca97d33b47d15d592291b6a4cb67316fe32ae11467df7e9aefff197244f2
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get -yqu dist-upgrade && \
     apt-get -yq install \
